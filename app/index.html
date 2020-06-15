@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anritsu PIM Automizer</title>
+  <script>
+    let win = nw.Window.get();
+    win.maximize();
+    
+    let path = require("path");
+    let nwPath = path.dirname(process.execPath);
+
+    win.on('close', function () {
+      nw.Shell.openItem(path.join(nwPath, "app","kill.vbs"));
+      this.close(true);
+    });
+
+    win.on('loaded', function () {
+      nw.Shell.openItem(path.join(nwPath, "app","visa.vbs"));
+    });
+
+  </script>
+</head>
+<frameset cols="55%,45%">
+   <frame name="main" id="main" src="child1.html" scrolling="no" marginwidth="0" marginheight="0" frameborder="1"/>
+   <frame name="remote" id="remote" src="child2.html" scrolling="no" marginwidth="0" marginheight="0" frameborder="1"/>
+</frameset>
+<script>
+// var os = require('os');
+// document.write('You are running on ', os.platform());
+// // Create an empty context menu
+// var menu = new nw.Menu();
+
+// // Add some items with label
+// menu.append(new nw.MenuItem({
+//   label: 'Item A',
+//   click: function(){
+//     alert('You have clicked at "Item A"');
+//   }
+// }));
+// menu.append(new nw.MenuItem({ label: 'Item B' }));
+// menu.append(new nw.MenuItem({ type: 'separator' }));
+// menu.append(new nw.MenuItem({ label: 'Item C' }));
+
+// // Hooks the "contextmenu" event
+// document.body.addEventListener('contextmenu', function(ev) {
+//   // Prevent showing default context menu
+//   ev.preventDefault();
+//   // Popup the native context menu at place you click
+//   menu.popup(ev.x, ev.y);
+
+//   return false;
+// }, false);
+
+//   var win = nw.Window.get();
+//   win.maximize();
+</script>
+
+</html>

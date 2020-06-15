@@ -1,0 +1,8 @@
+{
+  "name": "Automizer",
+  "description": "Automizer",
+  "main": "app/index.html",
+  "window": {
+    "icon": "app/icon.png"
+  }
+}

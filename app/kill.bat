@@ -1,0 +1,6 @@
+cmd "/C TASKKILL /IM node.exe /F"
+cmd "/C TASKKILL /IM nwjs.exe /F"
+cmd "/C TASKKILL /IM Automizer.exe /F"
+cmd "/C TASKKILL /IM Electron.exe /F"
+cmd "/C TASKKILL /IM cmd.exe /F"
+cmd "/C TASKKILL /IM conhost.exe /F"

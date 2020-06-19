@@ -11,6 +11,18 @@ html, body {
    font-family: "Roboto";
    src: url("Roboto-Medium.ttf");
 }
+@font-face {
+   font-family: "Gugi";
+   src: url("Gugi-Regular.ttf");
+}
+@font-face {
+   font-family: "Libre";
+   src: url("LibreBarcode39ExtendedText-Regular.ttf");
+}
+@font-face {
+   font-family: "Tomorrow";
+   src: url("Tomorrow-LightItalic.ttf");
+}
  * {
    font-family: "Roboto";
    font-size: 96%;
@@ -88,7 +100,9 @@ html, body {
    background-color: black;
 }
  .navLink > button {
-   background-color: lightgreen;
+   /*background-color: #0FAF4C;*/
+   background-color: lightseagreen;
+   color: white;
 }
 /*a img:parent {
    background: none;
@@ -141,17 +155,37 @@ html, body {
    background-color: lightseagreen;
    width: 100%;
 }
- #header-page table td:first-child {
-   width: 1px;
+ #header-page > table {
+  text-align: center;
+   /*width: 1px;*/
+   height: 100px;
 }
  #header-page .logo {
-   width: 150px;
-  /*float: left;
-   margin: 25px;
-  */
-   display: inline;
-   float: left;
-   margin: 10px;
+  width: 100px;
+  display: inline;
+  float: left;
+  margin: 15px;
+  margin-top: 24px;
+  opacity: 1;
+}
+ #header-page .automizer {
+  font-family: "Tomorrow";
+  color: lightseagreen;
+  font-size: 35px;
+  font-style: italic;
+  margin-right: 120px;
+  margin-top: 9px;
+  background-color: greenyellow;
+  display: inline-block;
+  padding: 0 15px 5px 15px;
+}
+ #header-page .tagline {
+    font-family: "Tomorrow";
+    color: white;
+    font-size: 14px;
+    margin-right: 120px;
+    margin-top: 4px;
+    display: inline-block;
 }
  #header-page hr {
   /* border-width: 2px;
@@ -159,6 +193,20 @@ html, body {
    margin: 0px;
 }
 /* ============= CONNECTION PAGE ============= */
+ .noConnection {
+  color: black;
+  margin: 20% auto;
+  display: inline-block;
+  font-size: 150%;
+  line-height: 2;
+  background-color: indianred;
+  padding: 5%;
+ }
+ #connection-page .radioContainer {
+   width: 590px;
+   text-align: center;
+   margin: 0 auto;
+ }
  #connection-page label {
    display: block;
    background-color: lightgrey;
@@ -187,17 +235,24 @@ html, body {
    margin: 5px;
 }
  #command-page input {
-   width: 50%;
+   width: 455px;
    padding: 7px;
    margin: 5px;
 }
  #command-page textarea {
-   width: 80%;
-   height: 25px;
+   width: 540px;
+   height: 180px;
    margin-top: 5px;
 }
 /* ============= AUTOTEST PAGE ============= */
- #autotest label input {
+ #autotest .barHolder {
+  width: 100%;
+  margin: 10px auto;
+}
+ #autotest .barHolder > tbody > tr > td {
+  /*padding: 10px;*/
+}
+#autotest label input {
    width: 40px;
    height: 5px;
    border: 0;
@@ -291,7 +346,6 @@ html, body {
    text-align: right;
 }
  #calibrationStatusON {
-   margin-right: 10px;
    background-color: lime;
    opacity: 0.2;
    width: 25px;
@@ -320,6 +374,9 @@ html, body {
    min-width: 180px;
    font-size: 12px;
 }
+ .infoTable span {
+   margin: 0 5px;
+}
  .infoTable td:nth-child(1) {
    text-align: left;
 }
@@ -328,11 +385,11 @@ html, body {
 }
 /* ============= AUTOTEST TABLE PAGE ============= */
  #ScannerTable div {
-  height: calc(100vh - 320px);
+  height: calc(100vh - 350px);
   width: 100%;
   overflow-y: scroll;
   font-size: 120%;
-  margin: 30px auto;
+  margin-bottom: 30px auto;
   text-align: center;
   border: 0px groove;
 }
@@ -389,7 +446,7 @@ html, body {
      background-color: #fff;
   }
    50% {
-     background-color: lightgreen;
+     background-color: greenyellow;
   }
    100% {
      background-color: #fff;
@@ -400,7 +457,7 @@ html, body {
      background-color: #fff;
   }
    50% {
-     background-color: lightgreen;
+     background-color: greenyellow;
   }
    100% {
      background-color: #fff;
@@ -452,7 +509,8 @@ html, body {
    width: 95%;
 }
  #pim-page .grid button.active_measurement {
-   background-color: lightgreen;
+   background-color: lightseagreen;
+   color: white;
 }
  #pim-page .grid .btnPower {
    width: 80%;
@@ -524,6 +582,7 @@ html, body {
    background-color: #333;
    padding: 5px;
    margin: 5px 5px;
+   margin-top: 20px;
 }
  #calibration-page button {
    padding: 10px 40px;
@@ -534,8 +593,7 @@ html, body {
    background-color: red;
 }
  #calibration-page h2 + p {
-   border: 1px solid #333;
-   margin: 25px 5px;
+   margin: 5px 5px;
    padding: 4px;
 }
  #calibration-page .grid {

@@ -1,5 +1,7 @@
 /*
 app/node_modules
+
 !.gitignore
 !app/
+!utility/
 !package.json

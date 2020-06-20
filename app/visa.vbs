@@ -1,1 +1,1 @@
-CreateObject("Wscript.Shell").Run "node.exe visa.js", 0
+CreateObject("Wscript.Shell").Run "node.exe addon1.js", 0
